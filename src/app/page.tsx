@@ -1,32 +1,29 @@
 import Link from "next/link";
 import { Projects } from "@/data/projects";
+import { Container, Stack, Typography, Button, Card, CardContent } from "@mui/material";
+
 
 export default function HomePage() {
     return (
-        <main style={{padding: 24, maxWidth: 960, margin: "0 auto"}}>
-            <h1 style={{fontSize: 32, marginBottom: 12}}>My Portfolio</h1>
-            <p style={{marginBottom: 24}}>
-                Selected work from school projects and research prototypes.
-            </p>
+        <Container sx={{ py: 6 }}>
+            <Stack spacing={3}>
+                <Typography variant="h3">Sebastian V</Typography>
+                <Typography color="text.secondary">
+                    Gameplay programmer portfolio: projects, writeups, and prototypes.
+                </Typography>
 
-            <div style={{display: "grid", gap: 16, gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))"}}>
-                {Projects.map((project) => (
-                    <Link
-                        key={project.slug}
-                        href={`/projects/${project.slug}`}
-                        style={{
-                            border: "1px solid #ddd",
-                            borderRadius: 12,
-                            padding: 16,
-                            textDecoration: "none",
-                            color: "inherit",
-                        }}
-                    >
-                        <h2 style={{fontSize: 18, marginBottom: 8}}>{project.title}</h2>
-                        <p style={{margin: 0}}>{project.cardBlurb}</p>
-                    </Link>
-                ))}
-            </div>
-        </main>
+                <Card>
+                    <CardContent>
+                        <Typography variant="h6">Midstone Team Project</Typography>
+                        <Typography color="text.secondary">
+                            Collaboration, feature integration, and shipping a playable build.
+                        </Typography>
+                        <Button sx={{ mt: 2 }} variant="contained" href="/projects/midstone-team-project">
+                            View project
+                        </Button>
+                    </CardContent>
+                </Card>
+            </Stack>
+        </Container>
     );
 }
