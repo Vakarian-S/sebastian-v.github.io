@@ -5,6 +5,7 @@
     description: string;
     skills: string[];
     githubUrl: string;
+    videoSrc?: string;
 };
 
 export const Projects: Project[] = [
@@ -14,8 +15,9 @@ export const Projects: Project[] = [
         cardBlurb: "A curated set of early assignments showing my rendering pipeline and physics problem solving.",
         description:
             "A collection of first year assignments focused on rendering fundamentals and physics calculations. I used these projects to build confidence with math driven gameplay logic, debugging, and presenting results clearly.",
-        skills: ["Rendering basics", "Physics math", "Debugging", "Technical communication"],
-        githubUrl: "https://github.com/<YOUR_USERNAME>/<REPO_NAME>",
+        skills: ["C++", "Rendering basics", "Physics math", "Debugging", "Technical communication"],
+        githubUrl: "https://github.com/Vakarian-S/FirstYearGameProgramming",
+        videoSrc: 'https://youtube.com/embed/BNyhRWVlTFI'
     },
     {
         slug: "midstone-team-project",
@@ -23,8 +25,9 @@ export const Projects: Project[] = [
         cardBlurb: "A collaborative build that shows how I work on a team and ship features.",
         description:
             "A team midstone project that highlights collaboration, planning, and integrating multiple systems into one playable experience. My focus was on building reliable features, communicating progress, and keeping the scope realistic.",
-        skills: ["Team workflow", "Feature integration", "Version control", "Scope management"],
-        githubUrl: "https://github.com/<YOUR_USERNAME>/<REPO_NAME>",
+        skills: ["C++", "Team workflow", "Feature integration", "Version control", "Scope management"],
+        githubUrl: "https://github.com/MattPiet/Mid-Stone",
+        videoSrc: 'https://youtube.com/embed/QmRGF4kQKY0'
     },
     {
         slug: "unreal-skill-tree-research",
@@ -32,7 +35,8 @@ export const Projects: Project[] = [
         cardBlurb: "A research driven prototype exploring scalable skill tree architecture in Unreal.",
         description:
             "A research and prototyping project exploring different ways to structure a scalable skill tree in Unreal. I focused on maintainability, clean data structures, and how to present progression clearly to players.",
-        skills: ["Unreal architecture", "Data modeling", "Prototyping", "Systems design"],
+        skills: ["Unreal Engine", "Unreal architecture", "Data modeling", "Prototyping", "Systems design"],
         githubUrl: "https://github.com/<YOUR_USERNAME>/<REPO_NAME>",
+        videoSrc: 'https://youtube.com/embed/BNyhRWVlTFI'
     },
 ];
