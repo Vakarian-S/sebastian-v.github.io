@@ -38,7 +38,7 @@ export const Projects: Project[] = [
             "\n" +
             "With a focus on data assets and their connection to UI elements, I created a simple skill tree widget. As an extension of the system, I implemented a small roguelike-style mechanic where a special skill randomly presents three skills from a defined pool of choices. Additionally, I iterated on the implementation with an alternative version that offers more versatility, such as automatically drawn skill trees based on data, at the cost of developing a custom rendering system to correctly organize skills within the canvas.",
         skills: ["Unreal Engine", "Blueprints", "UI Widgets", "Data Assets"],
-        githubUrl: "https://github.com/<YOUR_USERNAME>/<REPO_NAME>",
+        githubUrl: "https://github.com/Vakarian-S/Unreal-Skill-Tree",
         videoSrc: 'https://youtube.com/embed/9E0s5IEM8tY'
     },
 ];
