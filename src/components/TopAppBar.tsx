@@ -3,6 +3,7 @@ import { AppBar, Box, Container, IconButton, Toolbar, Tooltip, Typography } from
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import DescriptionIcon from '@mui/icons-material/Description';
+import Link from 'next/link';
 
 interface TopBarProps {
     title?: string;
@@ -13,32 +14,37 @@ const TopAppBar: FC<TopBarProps> = ({title = 'My App'}) => {
         <AppBar position="sticky">
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
+
                     <Box sx={{flexGrow: 1}}>
                         <Typography
                             variant="h2"
                             fontWeight={"bold"}
                             noWrap
-                            component="a"
                             sx={{fontSize: {xs: '18px', md: '32px'}}}
                         >
-                            Sebastian Villarroel
+                            <Link href="/" style={{textDecoration: "none", color: "inherit"}}>
+                                Sebastian Villarroel
+                            </Link>
                         </Typography>
                     </Box>
                     <Box sx={{flexGrow: 0}}>
                         <Tooltip title="My LinkedIn">
-                            <IconButton target={'_blank'} href={'https://www.linkedin.com/in/sebastian-villarroel-2243aa177/'}
+                            <IconButton target={'_blank'}
+                                        href={'https://www.linkedin.com/in/sebastian-villarroel-2243aa177/'}
                                         aria-label="linkedin" size={"medium"} style={{color: 'white'}}>
                                 <LinkedInIcon fontSize={"large"}/>
                             </IconButton>
                         </Tooltip>
                         <Tooltip title="My Github">
-                            <IconButton target={'_blank'} href={'https://github.com/Vakarian-S'} aria-label="github" size={"medium"}
+                            <IconButton target={'_blank'} href={'https://github.com/Vakarian-S'} aria-label="github"
+                                        size={"medium"}
                                         style={{color: 'white'}}>
                                 <GitHubIcon fontSize={"large"}/>
                             </IconButton>
                         </Tooltip>
                         <Tooltip title="My Resume">
-                            <IconButton target={'_blank'} href={'https://www.linkedin.com/in/sebastian-villarroel-2243aa177/'}
+                            <IconButton target={'_blank'}
+                                        href={'/Resume.pdf'}
                                         aria-label="resume" size={"medium"} style={{color: 'white'}}>
                                 <DescriptionIcon fontSize={"large"}/>
                             </IconButton>
@@ -47,7 +53,8 @@ const TopAppBar: FC<TopBarProps> = ({title = 'My App'}) => {
                 </Toolbar>
             </Container>
         </AppBar>
-    );
+    )
+        ;
 };
 
 export default TopAppBar;

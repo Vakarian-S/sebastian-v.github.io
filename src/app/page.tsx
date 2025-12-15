@@ -7,7 +7,6 @@ import TopAppBar from "@/components/TopAppBar";
 export default function HomePage() {
     return (
         <Box bgcolor="primary.50" minHeight="100vh">
-            <TopAppBar/>
 
             <Box padding={2} component="section" display="flex" justifyContent="center">
                 <Typography variant="h2" color="primary.dark">

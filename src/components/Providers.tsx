@@ -3,6 +3,8 @@
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
+import { Box } from "@mui/material";
+import TopAppBar from "./TopAppBar";
 
 const theme = createTheme({
     palette: {
@@ -29,7 +31,10 @@ export default function Providers(props: { children: React.ReactNode }) {
         <AppRouterCacheProvider>
             <ThemeProvider theme={theme}>
                 <CssBaseline />
-                {props.children}
+                <Box bgcolor="primary.50" minHeight="100vh">
+                    <TopAppBar />
+                    {props.children}
+                </Box>
             </ThemeProvider>
         </AppRouterCacheProvider>
     );
