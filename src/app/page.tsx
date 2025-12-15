@@ -16,13 +16,10 @@ export default function HomePage() {
 
             <Container maxWidth="xl" component="section">
                 <Typography color="primary.dark">
-                    This portfolio highlights three projects from my academic work that best
-                    represent my technical skills, teamwork experience, and ability to learn
-                    independently. Each project focuses on a different area of development,
-                    ranging from core programming and math-based problem solving, to
-                    collaborative production work, to in-depth engine research. Together,
-                    these projects show how I approach learning new systems and applying that
-                    knowledge in practical ways.
+                    This portfolio highlights the projects I have made as a result of my academic work at Humber
+                    Polytechnic. The work displayed covers areas such as building your own engine in C++, focusing on
+                    rendering and physics using development APIs, as well as working with game engines such as Unreal
+                    Engine.
                 </Typography>
             </Container>
 
@@ -34,6 +31,7 @@ export default function HomePage() {
                     display: "flex",
                     flexDirection: {xs: "column", md: "row"},
                     gap: 5,
+                    alignItems: "stretch",
                 }}
             >
                 {Projects.map((project, index) => (
@@ -48,12 +46,6 @@ export default function HomePage() {
                     />
                 ))}
             </Container>
-
-            <Box bgcolor="primary.main" sx={{mt: 6, py: 4}}>
-                <Container maxWidth="xl">
-                    <Typography color="primary.contrastText">Footer placeholder</Typography>
-                </Container>
-            </Box>
         </Box>
     );
 }

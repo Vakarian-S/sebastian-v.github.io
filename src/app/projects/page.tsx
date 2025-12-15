@@ -41,20 +41,20 @@ export default function ProjectsPage() {
                             px: {xs: 0, md: 4},
                             display: "flex",
                             flexDirection: {xs: "column", md: "row"},
+                            alignItems: "stretch",
                             gap: 5,
                         }}
                     >
-                        {Projects.map((project) => (
-                            <Box key={project.slug} sx={{width: "100%"}}>
-                                <ProjectCard
-                                    title={project.title}
-                                    description={project.cardBlurb}
-                                    githubLink={project.githubUrl}
-                                    detailHref={`/projects/${project.slug}`}
-                                    videoSrc={project.videoSrc}
-                                    chips={project.skills}
-                                />
-                            </Box>
+                        {Projects.map((project, index) => (
+                            <ProjectCard
+                                key={`${project?.title}-${index}`}
+                                title={project.title}
+                                description={project.cardBlurb}
+                                githubLink={project.githubUrl}
+                                detailHref={`/projects/${project.slug}`}
+                                videoSrc={project.videoSrc}
+                                chips={project.skills}
+                            />
                         ))}
                     </Container>
                 </Stack>
