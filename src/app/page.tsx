@@ -1,6 +1,5 @@
-import Link from "next/link";
 import { Projects } from "@/data/projects";
-import { Container, Box, Stack, Typography, Button, Card, CardContent } from "@mui/material";
+import { Container, Box, Typography } from "@mui/material";
 import ProjectCard from "@/components/ProjectCard";
 import TopAppBar from "@/components/TopAppBar";
 
